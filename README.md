@@ -213,8 +213,43 @@ Using your knowledge of R, perform t-tests to determine if all manufacturing lot
 
     Biggest takeaway is that Lot 3 is statistically different from the other Lots, and the system needs to be re-evaluated and/or calibrated before it can reach the designated criteria.
 
-    
+
+## Deliverable 4
+**Instructions**
+
+Using your knowledge of R, design a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers.
+
+**Metrics**
+
+Example metrics to test the consumers' interest in purchasing a car:
+
+- Fuel Efficiency (Independent Variable)
+- Cost of Ownership (Independent Variable)
+- Color Options (Dependent)
+- Drivetrain Options/Package (Independent)
+- Selling Value (Dependent)
+- Selling Value (by Age since Manufactured, Dependent)
+- Year Manufactured (Independent)
+- Number Sold (by Year, Independent)
+- Number on Road (by Year, Independent)
+- Car Class (Dependent)
+- Safety Ratings (Independent)
 
 
+**Hypothesis**
 
+In order to test the relevance of the metrics:
+
+ - Null: MechaCar is optimally priced based on metrics for its class.
  
+ - Alt: MechaCar is not optimally priced based on metrics for its class.
+
+If the metrics do not provide statistical relevance, find and test new metrics.
+
+ **Statistical Tests**
+
+ Examples of a statistical test:
+ 
+  - Multiple Linear Regression to determine factors with highest impact on selling price or resale value after X amount of years.
+
+- Multiple Linear Regression to if amount of options (color, drive, features) have an impact on total amount sold.
