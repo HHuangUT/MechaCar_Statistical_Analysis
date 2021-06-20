@@ -121,4 +121,100 @@ Box Plot of by Lot:
 2. When considering each Lot individually, only Lots 1 & 2 fall within the 100 variance requirement (0.9795918
  and 7.4693878, respectively). Lot 3 did not meet the requirement (170.2861224). The Box Plot 2 (above) illustrates the distinct difference in the lots.
 
+## Deliverable 3
+**Instructions**
+
+Using your knowledge of R, perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+
+
+**Code Used**
+
+    # Deliverable 3
+    t.test(mecha_coil$PSI,mu=1500)
+    lot1 <- subset(mecha_coil, Manufacturing_Lot=="Lot1")
+    lot2 <- subset(mecha_coil, Manufacturing_Lot=="Lot2")
+    lot3 <- subset(mecha_coil, Manufacturing_Lot=="Lot3")
+
+    t.test(lot1$PSI,mu=1500)
+    t.test(lot2$PSI,mu=1500)
+    t.test(lot3$PSI,mu=1500)
+
+**Console Result**
+
+    > # Deliverable 3
+    > t.test(mecha_coil$PSI,mu=1500)
+
+        One Sample t-test
+
+    data:  mecha_coil$PSI
+    t = -1.8931, df = 149, p-value = 0.06028
+    alternative hypothesis: true mean is not equal to 1500
+    95 percent confidence interval:
+    1497.507 1500.053
+    sample estimates:
+    mean of x 
+    1498.78 
+
+    > lot1 <- subset(mecha_coil, Manufacturing_Lot=="Lot1")
+    > lot2 <- subset(mecha_coil, Manufacturing_Lot=="Lot2")
+    > lot3 <- subset(mecha_coil, Manufacturing_Lot=="Lot3")
+    > 
+    > t.test(lot1$PSI,mu=1500)
+
+        One Sample t-test
+
+    data:  lot1$PSI
+    t = 0, df = 49, p-value = 1
+    alternative hypothesis: true mean is not equal to 1500
+    95 percent confidence interval:
+    1499.719 1500.281
+    sample estimates:
+    mean of x 
+        1500 
+
+    > t.test(lot2$PSI,mu=1500)
+
+        One Sample t-test
+
+    data:  lot2$PSI
+    t = 0.51745, df = 49, p-value = 0.6072
+    alternative hypothesis: true mean is not equal to 1500
+    95 percent confidence interval:
+    1499.423 1500.977
+    sample estimates:
+    mean of x 
+    1500.2 
+
+    > t.test(lot3$PSI,mu=1500)
+
+        One Sample t-test
+
+    data:  lot3$PSI
+    t = -2.0916, df = 49, p-value = 0.04168
+    alternative hypothesis: true mean is not equal to 1500
+    95 percent confidence interval:
+    1492.431 1499.849
+    sample estimates:
+    mean of x 
+    1496.14
+
+
+**Takeaways**
+
+1. **Total Lot**: Total Lot p-value (0.06028) is greater than the signigicance level (0.05), suggesting that there is not enough evidence to reject the null hypothesis, and that all 3 of the Lots are statistically similar to the population mean of 1500.
+
+2. Looking at individual lots:
+    
+    - **Lot 1** has a p-value of 1, suggesting no statistical difference from the population mean of 1500, and that the null hypotheses cannot be rejected.
+
+    - **Lot 2** has a p-value of 0.6072, and suggest the same takeaways as Lot 1.
+
+    - **Lot 3** has a p-value of 0.04168, and a sample mean of 1496.14, suggesting to reject the null hypothesis.
+
+    Biggest takeaway is that Lot 3 is statistically different from the other Lots, and the system needs to be re-evaluated and/or calibrated before it can reach the designated criteria.
+
+    
+
+
+
  
