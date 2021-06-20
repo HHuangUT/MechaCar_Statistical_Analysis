@@ -101,17 +101,22 @@ The MechaCar Suspension_Coil.csv dataset contains the results from multiple prod
 
 Total Lot Results:
 
+![image](https://user-images.githubusercontent.com/80546200/122690405-066b0d00-d1ef-11eb-94af-de78ef035a9d.png)
 
 
 Box Plot of Total Lot:
 
+![image](https://user-images.githubusercontent.com/80546200/122690406-0d921b00-d1ef-11eb-98b9-bcc1fa627441.png)
 
 
 Results by Lot:
 
+![image](https://user-images.githubusercontent.com/80546200/122690416-14b92900-d1ef-11eb-9a9c-0a7a1fa1849c.png)
 
 
 Box Plot of by Lot:
+
+![image](https://user-images.githubusercontent.com/80546200/122690417-18e54680-d1ef-11eb-92a6-c456eddae87b.png)
 
 
 **Takeaways**
